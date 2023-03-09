@@ -29,6 +29,7 @@ export class AppComponent {
   userLName: string = "";
 
   onStudentInfo() {
+
     console.log(this.userName);
     console.log(this.userLName);
     console.log(this.userAddress);
