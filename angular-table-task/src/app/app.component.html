@@ -1,0 +1,49 @@
+<!-- <router-outlet></router-outlet> -->
+
+<!-- start : form -->
+<form [style]="firstForm">
+  <label for="first" [style]="headName">First Name :</label>
+  <input type="text" [style]="studentData" placeholder="Enter your name" name="firstName" [(ngModel)]="userName">
+  <label for="last" [style]="headName">Last Name :</label>
+  <input type="text" id="last" [style]="studentData" placeholder="Enter last name" name="lastName"
+    [(ngModel)]="userLName">
+  <label for="address" [style]="headName">Address :</label>
+  <input type="text" [style]="studentData" placeholder="Address..." name="address" [(ngModel)]="userAddress">
+  <p [style]="studentName">{{userName}}</p>
+  <button [style]="btn" (click)="onStudentInfo()">Save student info</button>
+  <p [style]="studentName">{{userAddress}}</p>
+</form>
+<!-- end : form -->
+<!-- start:table -->
+<div [style]="tableContainer">
+  <table [style]="table">
+    <thead>
+      <tr>
+        <th [attr.colspan]="3" [style]="tableHeading">Student's Information</th>
+      </tr>
+      <tr>
+        <th [style]="lineDraw">First Name</th>
+        <th [style]="lineDraw">Last Name</th>
+        <th [style]="lineDraw">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [style]="lineDraw">Karan</td>
+        <td [style]="lineDraw">Tandel</td>
+        <td [style]="lineDraw">Valsad</td>
+      </tr>
+      <tr>
+        <td [style]="lineDraw">Viren</td>
+        <td [style]="lineDraw">Patel</td>
+        <td [style]="lineDraw">Navsari</td>
+      </tr>
+      <tr>
+        <td [style]="lineDraw">Raj</td>
+        <td [style]="lineDraw">Shah</td>
+        <td [style]="lineDraw">Surat</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- end:table -->
