@@ -32,7 +32,6 @@ export class AppComponent {
     console.log(this.userName);
     console.log(this.userLName);
     console.log(this.userAddress);
-
   }
   //end : event
 
