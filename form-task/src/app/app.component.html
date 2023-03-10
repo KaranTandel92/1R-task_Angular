@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+<h1>Parent works!</h1>
+
+
+<label for="">First Name :</label>
+<input type="text" (keyup)="0" #name>
+
+<label for="">Dob :</label>
+<input type="text" (keyup)="0" #dob>
+
+<app-child [name]="name.value" [dob]="dob.value"></app-child>
