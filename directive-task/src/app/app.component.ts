@@ -26,6 +26,6 @@ export class AppComponent {
   dayOnly: string = "";
 
   weekOff =
-    { 'background-color': 'red', 'padding': '10px', 'text-align': 'center', 'color': 'white' }
+    { 'background-color': 'red', 'padding': '10px', 'text-align': 'center', 'color': 'white', 'border-radius': '8px' }
 
 }
