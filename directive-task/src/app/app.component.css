@@ -1,0 +1,12 @@
+.workingDay {
+    text-align: center;
+    background-color: green;
+    padding: 10px;
+}
+
+.halfDay {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}

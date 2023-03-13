@@ -1,0 +1,51 @@
+<router-outlet></router-outlet>
+
+<!-- create table -->
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th *ngFor="let item of key">{{item}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let itrator of student">
+      <td>{{itrator.id}}</td>
+      <td>{{itrator.name}}</td>
+      <td>{{itrator.email}}</td>
+      <td>{{itrator.num}}</td>
+      <td *ngIf="itrator.text"><button>Click</button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- end table -->
+
+<div *ngFor="let weekDay of day">
+  <input type="radio" [value]="weekDay" name="fav" [(ngModel)]="dayOnly">
+  <label for="">{{weekDay}}</label>
+</div>
+
+<!-- print message -->
+<div [ngSwitch]="dayOnly">
+  <div *ngSwitchCase="'sunday'">
+    <h2 [ngStyle]="weekOff">Today is SUNDAY</h2>
+  </div>
+  <div *ngSwitchCase="'monday'">
+    <h5 [ngClass]="'workingDay'">Today is MONDAY</h5>
+  </div>
+  <div *ngSwitchCase="'tuesday'">
+    <h5 [ngClass]="'workingDay'">Today is TUESDAY</h5>
+  </div>
+  <div *ngSwitchCase="'wednesday'">
+    <h5 [ngClass]="'workingDay'">Today is WEDNESDAY</h5>
+  </div>
+  <div *ngSwitchCase="'thirsday'">
+    <h5 [ngClass]="'workingDay'">Today is THIRSDAY</h5>
+  </div>
+  <div *ngSwitchCase="'friday'">
+    <h5 [ngClass]="'workingDay'">Today is FRIDAY</h5>
+  </div>
+  <div *ngSwitchCase="'saturday'">
+    <h4 [ngClass]="'halfDay'">Today is SATURDAY</h4>
+  </div>
+</div>
+<!-- end message -->

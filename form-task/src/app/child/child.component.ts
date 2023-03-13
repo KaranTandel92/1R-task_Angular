@@ -24,7 +24,7 @@ export class ChildComponent {
 
   message!: string;
 
-
+  // name section
   @Input()
   public get name(): string {
     return this._name
@@ -34,6 +34,8 @@ export class ChildComponent {
     this.uname = this._name.charAt(0).toUpperCase() + this._name.substring(1);
   }
 
+
+  // age section
   @Input()
   public get dob(): string {
     return this._dob
@@ -55,7 +57,6 @@ export class ChildComponent {
     }
   }
 
-
   // ngOnChanges(changes: SimpleChanges): void {
   //   //   // console.log("running");
 
@@ -65,6 +66,8 @@ export class ChildComponent {
 
   // }
 
+
+  // date section
   private getAge(dateOfBirth: string) {
     let DOB = new Date(dateOfBirth).getTime();
     let currentDate = new Date().getTime();
