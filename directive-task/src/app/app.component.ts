@@ -28,4 +28,14 @@ export class AppComponent {
   weekOff =
     { 'background-color': 'red', 'padding': '10px', 'text-align': 'center', 'color': 'white', 'border-radius': '8px' }
 
+  word: boolean = false;
+
+  wordColor =
+    { 'color': 'green' }
+
+  btnClick() {
+    this.word = true;
+    this.wordColor;
+  }
+
 }

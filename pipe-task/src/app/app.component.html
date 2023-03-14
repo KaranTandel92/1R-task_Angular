@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+
+
+<input type="search" [(ngModel)]="searchProduct" [ngClass]="'searchbar'" placeholder="Search">
+<div [ngClass]="'mainContainer'">
+  <table [ngClass]="'table'">
+    <thead>
+      <tr>
+        <th *ngFor="let item of key" [ngClass]="'tableHeading'">{{item}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itrator of headingData | filter:searchProduct" [ngClass]="'tadbledata'">
+        <td>{{itrator.ID}}</td>
+        <td>{{itrator.NAME}}</td>
+        <td>{{itrator.DESCRIPTION}}</td>
+        <td>{{itrator.QTY}}</td>
+        <td>{{itrator.AVAILIBILITY}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -31,9 +31,10 @@
 <!-- print message -->
 <div [ngSwitch]="dayOnly">
   <div *ngSwitchCase="'sunday'">
+    <!-- Use ngStyle for weekOff -->
     <h2 [ngStyle]="weekOff">WEEKOFF</h2>
   </div>
-  <div *ngSwitchCase="'monday'">
+  <div *ngSwitchCase="'monday'">ng
     <h5 [ngClass]="'workingDay'">Today is MONDAY</h5>
   </div>
   <div *ngSwitchCase="'tuesday'">
@@ -53,3 +54,13 @@
   </div>
 </div>
 <!-- end message -->
+
+<button (click)="btnClick()">Click Me!</button>
+<p *ngIf="word" [ngStyle]="wordColor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vitae quam
+  nostrum atque,
+  voluptates laboriosam vel
+  quo incidunt eum deleniti!
+</p>
+
+<!-- custom directive -->
+<h3 appUserDirective>Custom Directive</h3>
