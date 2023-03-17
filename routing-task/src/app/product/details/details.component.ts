@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsComponent implements OnInit {
 
   public productid: any;
+  public productDetails: any;
   constructor(private route: ActivatedRoute) { }
 
 
@@ -16,7 +17,8 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log(this.route.snapshot.paramMap.get("id"));
-    this.productid = this.route.snapshot.paramMap.get("id");
+    this.productid = (this.route.snapshot.paramMap.get("id"));
+    this.productDetails = JSON.parse(this.productid)
   }
 
 }

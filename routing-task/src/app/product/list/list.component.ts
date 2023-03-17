@@ -13,11 +13,13 @@ export class ListComponent implements OnInit {
   }
 
   public productList = [
-    { id: 'Product-1', name: 'Chocolate' },
-    { id: 'Product-2', name: 'Buiscuit' },
-    { id: 'Product-3', name: 'Wafer' },
-    { id: 'Product-4', name: 'Sweets' },
-    { id: 'Product-5', name: 'ice-Cream' }
+    { id: 1, name: 'Chocolate' },
+    { id: 2, name: 'Buiscuit' },
+    { id: 3, name: 'Wafer' },
+    { id: 4, name: 'Sweets' },
+    { id: 5, name: 'ice-Cream' }
   ]
+
+
 
 }
