@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+
+<table [ngClass]="'table'">
+  <thead>
+    <tr>
+      <th *ngFor="let list of allProduct" [ngClass]="'tableHead'">{{list}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of newData">
+      <td [ngClass]="'tableData'">{{data.column1}}</td>
+      <td [ngClass]="'tableData'">{{data.column2}}</td>
+      <td [ngClass]="'tableData'">{{data.column3}}</td>
+      <td [ngClass]="'tableData'">{{data.column4}}</td>
+      <td [ngClass]="'tableData'">{{data.column5}}</td>
+    </tr>
+  </tbody>
+</table>
+<button [ngClass]="'btn'" value="1" (click)="getData($event)">1</button>
+<button [ngClass]="'btn'" value="2" (click)="getData($event)">2</button>
+<button [ngClass]="'btn'" value="3" (click)="getData($event)">3</button>
+<button [ngClass]="'btn'" value="4" (click)="getData($event)">4</button>
+<button [ngClass]="'btn'" value="5" (click)="getData($event)">5</button>
+<button [ngClass]="'btn'" value="6" (click)="getData($event)">6</button>
+<button [ngClass]="'btn'" value="7" (click)="getData($event)">7</button>
+<button [ngClass]="'btn'" value="8" (click)="getData($event)">8</button>
+<button [ngClass]="'btn'" value="9" (click)="getData($event)">9</button>
+<button [ngClass]="'btn'" value="10" (click)="getData($event)">10</button>

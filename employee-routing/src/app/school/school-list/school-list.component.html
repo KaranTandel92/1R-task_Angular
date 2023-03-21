@@ -1,0 +1,5 @@
+<p>school-list works!</p>
+
+<ul>
+    <li *ngFor="let schoollist of school"><a routerLink="/schoolDetails/{{schoollist.id}}">{{schoollist.name}}</a></li>
+</ul>
