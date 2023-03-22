@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  title = 'pagination-task';
   public firstIndex: any;
   public lastIndex: any;
   public newData: any;
   public target: number = 10;
-  title = 'pagination-task';
+  public index: any;
+  public button: number[] = [];
+  public totalBtn: any;
 
   public product = [
     { column1: "one", column2: "two", column3: "three", column4: "four", column5: "five" },
@@ -116,8 +119,9 @@ export class AppComponent implements OnInit {
   public allProduct = Object.keys(this.product[0]);
 
   getData(event: any) {
-    debugger
+    // debugger
     this.firstIndex = ((event.target.value) - 1) * 10;
+    console.log(event.target.value);
     this.lastIndex = this.firstIndex + (this.target - 1);
     this.newData = this.product.filter(item => {
       return this.product.indexOf(item) >= this.firstIndex && this.product.indexOf(item) <= this.lastIndex
@@ -125,9 +129,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.newData = this.product.filter(item => {
-      return this.product.indexOf(item) >= 0 && this.product.indexOf(item) <= 9
-    })
+    this.totalBtn = this.product.length / this.target;
+    for (let index = 1; index <= Math.ceil(this.totalBtn); index++) {
+      this.button.push(index)
+      console.log(this.button);
+      this.newData = this.product.filter(item => {
+        return this.product.indexOf(item) >= 0 && this.product.indexOf(item) <= 9
+      })
+    }
   }
-
 }

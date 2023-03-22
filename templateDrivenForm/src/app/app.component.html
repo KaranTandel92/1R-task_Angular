@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <!-- name -->
+  <label for="">First Name* </label>
+  <input type="text" name="fName" ngModel required #fName="ngModel"><br>
+  <small [ngClass]="'danger'" *ngIf="!fName.valid && fName.touched">Enter valid name</small><br><br>
+  <label for="">Last Name* </label>
+  <input type="text" name="lName" ngModel><br><br>
+  <!-- email -->
+  <label for="">E-mail* </label>
+  <input type="text" name="e-Mail" ngModel email #email="ngModel"><br>
+  <small [ngClass]="'danger'" *ngIf="!email.valid && email.touched">Enter valid email</small><br><br>
+  <!-- password -->
+  <label for="">Password* </label>
+  <input type="text" name="password" ngModel><br><br>
+  <label for="">Confirm Password* </label>
+  <input type="text" name="conPassword" ngModel><br><br>
+  <!-- address -->
+  <label for="">Address </label>
+  <textarea name="address" cols="30" rows="5"></textarea><br><br>
+
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
+
+<router-outlet></router-outlet>
