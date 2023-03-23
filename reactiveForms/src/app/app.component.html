@@ -1,22 +1,31 @@
-<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
-  <!-- name -->
-  <label for="">First Name* </label>
-  <input type="text" formControlName="username"><br>
-  <br><br>
-  <!-- email -->
-  <label for="">E-mail* </label>
-  <input type="text" formControlName="email"><br>
-  <br><br>
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()" class="w-50 form-group m-5">
+  <div formGroupName="userDetails">
+    <!-- name -->
+    <label for="">First Name*</label>
+    <input type="text" formControlName="username" class="form-control"><br>
+    <br><br>
+    <!-- email -->
+    <label for="">E-mail*</label>
+    <input type="text" formControlName="email" class="form-control"><br>
+    <small *ngIf="!myReactiveForm.get('userDetails.email')?.valid && myReactiveForm.get('userDetails.email')?.touched"
+      [ngClass]="'danger-text'">Enter valid email</small>
+    <br><br>
+  </div>
   <!-- password -->
-  <label for="">Password* </label>
-  <input type="text" formControlName="password"><br><br>
-  <label for="">Confirm Password* </label>
-  <input type="text" formControlName="confirmPassword"><br><br>
-  <!-- address -->
-  <label for="">Address </label>
-  <textarea name="address" cols="30" rows="5" formControlName="address"></textarea><br><br>
+  <label for="">Password*</label>
+  <input type="text" formControlName="password" class="form-control"><br><br>
+  <label for="">Confirm Password*</label>
+  <input type="text" formControlName="confirmPassword" class="form-control"><br><br>
+  <div formArrayName="skills">
+    <!-- address -->
+    <label for="">Address</label>
+    <div>
+      <textarea name="address" cols="30" rows="5" formControlName="address"></textarea>
+    </div><br>
+    <button type="button" class="btn btn-light">+ Light</button><br>
+  </div>
 
-  <button>Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 <router-outlet></router-outlet>

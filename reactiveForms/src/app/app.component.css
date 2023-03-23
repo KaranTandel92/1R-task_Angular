@@ -15,3 +15,12 @@ input.ng-invalid.ng-touched {
     border: 1px solid red;
     box-shadow: 0 0 13px inset #ff00001f;
 }
+
+.danger-text {
+    color: red;
+}
+
+.btn {
+    padding: 5px;
+    margin: 2px;
+}
