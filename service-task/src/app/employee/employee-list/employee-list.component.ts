@@ -1,32 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { EmployeeServiceService } from '../service/employee-service.service';
+
 
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  styleUrls: ['./employee-list.component.css'],
+  viewProviders: [EmployeeServiceService]
 })
 export class EmployeeListComponent implements OnInit {
-  constructor() { }
+  constructor(private service: EmployeeServiceService) { }
 
-
-
-  public employeeData: any;
   public newdata: any;
-
-  employeData = [
-    { id: 1, name: 'Karan', email: 'karan@gmail.com', password: 'xxxxxxxxx', address: 'Dungri', Action: "" },
-    { id: 2, name: 'Viren', email: 'viren@gmail.com', password: 'xxxxxxxxx', address: 'Malvan' },
-    { id: 3, name: 'Raj', email: 'raj@gmail.com', password: 'xxxxxxxxx', address: 'Valsad' },
-    { id: 4, name: 'Kanniya', email: 'kanniya@gmail.com', password: 'xxxxxxxxx', address: 'Vapi' },
-    { id: 5, name: 'Ashish', email: 'ashish@gmail.com', password: 'xxxxxxxxx', address: 'Pune' },
-    { id: 6, name: 'sagar', email: 'sagar@gmail.com', password: 'xxxxxxxxx', address: 'Bilimora' },
-    { id: 7, name: 'Deep', email: 'deep@gmail.com', password: 'xxxxxxxxx', address: 'Bigri' },
-  ]
+  public employeeData: any;
+  getData() {
+    this.service.employeeData();
+  }
 
   ngOnInit(): void {
-    this.newdata = Object.keys(this.employeData[0]);
+    this.newdata = Object.keys(this.employeeData[0]);
+
   }
 
 
 }
+
+

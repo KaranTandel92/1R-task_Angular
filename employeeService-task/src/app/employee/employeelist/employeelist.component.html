@@ -1,0 +1,28 @@
+<div class="m-5">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Technology</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employeeData of data">
+                <td>{{employeeData.id}}</td>
+                <td>{{employeeData.name}}</td>
+                <td>{{employeeData.email}}</td>
+                <td>{{employeeData.address}}</td>
+                <td>{{employeeData.technology}}</td>
+                <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+        <div class="addData">
+            <button type="button" class="btn btn-secondary" routerLink="/employee/forms">+ Add Employee</button>
+        </div>
+    </table>
+</div>

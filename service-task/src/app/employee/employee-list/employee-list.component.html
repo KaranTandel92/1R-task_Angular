@@ -6,12 +6,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let employeeList of employeData">
+            <tr *ngFor="let employeeList of employeeData">
                 <td>{{employeeList.id}}</td>
                 <td>{{employeeList.name}}</td>
                 <td>{{employeeList.email}}</td>
                 <td>{{employeeList.password}}</td>
                 <td>{{employeeList.address}}</td>
+                <td>{{employeeList.Technology}}</td>
                 <td><button type="button" class="btn btn-danger">Delete</button></td>
             </tr>
         </tbody>
