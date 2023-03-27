@@ -18,7 +18,7 @@
                 <td>{{employeeData.email}}</td>
                 <td>{{employeeData.address}}</td>
                 <td>{{employeeData.technology}}</td>
-                <td><button type="button" class="btn btn-danger">Delete</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="onClick(employeeData.id)">Delete</button></td>
             </tr>
         </tbody>
         <div class="addData">

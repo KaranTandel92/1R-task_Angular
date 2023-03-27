@@ -11,13 +11,25 @@ export class EmployeelistComponent implements OnInit {
 
   public data: any;
 
+
   constructor(private service: EmployeedetailsService) { }
 
-  ngOnInit(): void {
-    this.service.getEmployeeData();
-    let myArrayString: any = localStorage.getItem('employeeData')
-    this.data = JSON.parse(myArrayString);
 
+
+  onClick(id: any): void {
+    this.service.deleteRow(id);
+    this.data = this.service.getData();
+    // localStorage.removeItem(this.data);
+    // console.log();
   }
 
+
+  ngOnInit(): void {
+    this.service.getData();   //data get from the localstorage
+    let myArrayString: any = localStorage.getItem('employeeData')
+    this.data = JSON.parse(myArrayString);
+  }
 }
+
+
+

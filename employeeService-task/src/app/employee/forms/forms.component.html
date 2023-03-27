@@ -2,26 +2,28 @@
     <div class="m-5">
         <div class="form-group">
             <label for="formGroupExampleInput">First Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" #name>
         </div>
         <div class="form-group">
             <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" #email>
         </div>
         <div class="form-group">
             <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" #password>
         </div>
         <div class="form-group">
             <label for="inputPassword4">Address</label>
-            <textarea type="password" class="form-control" id="inputPassword4" placeholder="Address..."></textarea>
+            <textarea type="password" class="form-control" id="inputPassword4" placeholder="Address..."
+                #address></textarea>
             <button type="button" class="btn btn-secondary mt-2 mr-3">+ Add</button>
         </div>
         <div class="form-group">
             <label for="inputPassword4">Technology</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your domain">
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your domain" #technology>
         </div>
-        <button class="btn btn-primary" type="submit" routerLink="/employee/employeelist">Submit
+        <button class="btn btn-primary" type="submit" routerLink="/employee/employeelist"
+            (click)="saveNewData(name.value, email.value, password.value,address.value, technology.value)">Submit
             form</button>
     </div>
 </form>
