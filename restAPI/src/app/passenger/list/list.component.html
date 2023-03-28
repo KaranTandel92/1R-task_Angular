@@ -1,0 +1,25 @@
+<div class="m-5">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Passenger Name</th>
+                <th scope="col">Breath</th>
+                <th scope="col">Age</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of userDetails">
+                <th scope="row">{{data.id}}</th>
+                <td>{{data.username}}</td>
+                <td>{{data.breath}}</td>
+                <td>{{data.age}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="removeRow(data.id)">Delete</button>
+                    <button type="button" class="btn btn-secondary ml-3">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="m-5">
+    <form [formGroup]="myReactiveForm" (submit)="submitData()">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Passenger Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
+                formControlName="username">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Breath</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"
+                formControlName="breath">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Age</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"
+                formControlName="age">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
