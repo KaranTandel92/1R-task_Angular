@@ -17,7 +17,7 @@
                 <td>{{data.age}}</td>
                 <td>
                     <button type="button" class="btn btn-danger" (click)="removeRow(data.id)">Delete</button>
-                    <button type="button" class="btn btn-secondary ml-3">Edit</button>
+                    <button type="button" class="btn btn-secondary ml-3" (click)="editOldData(data.id)">Edit</button>
                 </td>
             </tr>
         </tbody>

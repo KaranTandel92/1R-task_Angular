@@ -25,4 +25,9 @@ export class PassengerServiceService {
     return this.http.delete(`${this.url}/${id}`);
   }
 
+  getNewData(id: number) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
+
 }

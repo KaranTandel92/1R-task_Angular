@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PassengerServiceService } from 'src/app/service/passenger-service.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { PassengerServiceService } from 'src/app/service/passenger-service.servi
 export class ListComponent implements OnInit {
   userDetails: any;
   newDataRow: any;
+  data: any;
 
   constructor(private passengerService: PassengerServiceService) { }
 
@@ -26,6 +27,13 @@ export class ListComponent implements OnInit {
     this.passengerService.deleteData(id).subscribe();
     this.receiveData();
     console.log(id);
+  }
+
+  editOldData(id: any) {
+    this.passengerService.getNewData(id).subscribe((res: any) => {
+
+      console.log(res);
+    })
   }
 
 }
