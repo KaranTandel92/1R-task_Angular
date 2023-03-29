@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PassengerServiceService } from 'src/app/service/passenger-service.service';
 
 @Component({
