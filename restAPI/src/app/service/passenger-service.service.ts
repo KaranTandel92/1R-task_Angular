@@ -13,10 +13,12 @@ export class PassengerServiceService {
 
   public url = 'http://localhost:3000/passenger';
 
+  // get data from the server
   getData() {
     return this.http.get(this.url);
   }
 
+  // data post on server
   postData(body: any) {
     return this.http.post(this.url, body);
   }
@@ -27,6 +29,10 @@ export class PassengerServiceService {
 
   getNewData(id: number) {
     return this.http.get(`${this.url}/${id}`);
+  }
+
+  editData(id: number, body: any) {
+    return this.http.put(`${this.url}/${id}`, body)
   }
 
 

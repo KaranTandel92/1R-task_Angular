@@ -1,0 +1,30 @@
+<div class="text-right mt-5 mr-5 mb-3">
+    <button type="button" class="btn btn-primary mb-3" routerLink="/addEmployee/ ">+ Add Employee</button>
+</div>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Department</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employeeDetails of storeEmployeeData">
+                <th scope="row">{{employeeDetails.id}}</th>
+                <td>{{employeeDetails.employeeName}}</td>
+                <td>{{employeeDetails.gender}}</td>
+                <td>{{employeeDetails.department}}</td>
+                <td>
+                    <span class="fa fa-edit" title="Edit your details"></span>
+                    <button (click)="removeDataRow(employeeDetails.id)">
+                        <span class="fa fa-trash-o ml-4" title="Delete your details"></span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

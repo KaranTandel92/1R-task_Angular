@@ -1,5 +1,5 @@
 <div class="m-5">
-    <form [formGroup]="myReactiveForm" (submit)="submitData()">
+    <form [formGroup]="myReactiveForm" (submit)="toggle ? submitData() : updateData()">
         <div class="form-group">
             <label for="formGroupExampleInput">Passenger Name</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"

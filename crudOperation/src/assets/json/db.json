@@ -18,16 +18,16 @@
   },
   "productDetails": [
     {
-      "id": 1,
-      "productName": "Good-Day",
+      "productName": "Good-Days",
       "productDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "type": "Busicuit"
+      "type": "Busicuit",
+      "id": 1
     },
     {
-      "id": 2,
       "productName": "Parle-G",
       "productDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "type": "Buiscuit"
+      "type": "Buiscuits",
+      "id": 2
     },
     {
       "id": 3,
@@ -96,28 +96,10 @@
       "type": "Wafer"
     },
     {
-      "id": 14,
-      "productName": "Eclairs",
+      "productName": "DairyMilk",
       "productDescription": "Lorem ipsum dolor sit amet, adipisicing elit.",
-      "type": "Chocolate"
-    },
-    {
-      "id": 15,
-      "productName": "Nescafe",
-      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "type": "Coffee"
-    },
-    {
-      "id": 16,
-      "productName": "Good-Day",
-      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      "type": "Busicuit"
-    },
-    {
-      "productName": "Good-Day",
-      "productDescription": "Lorem sgvfdz ds gfgfg fs g",
-      "type": "Busicuit",
-      "id": 18
+      "type": "Chocolate",
+      "id": 14
     }
   ]
 }

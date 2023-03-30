@@ -20,6 +20,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataGet();   // get data from the server
+    history.pushState(null, "", location.href);
   }
 
   // delete data from the list

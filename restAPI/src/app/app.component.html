@@ -1,5 +1,5 @@
-<app-details></app-details>
+<app-details [id]="id" [username]="username" [breath]="breath" [age]="age"></app-details>
 
-<app-list></app-list>
+<app-list (myEvent)="getData($event)"></app-list>
 
 <router-outlet></router-outlet>

@@ -17,7 +17,8 @@
                 <td>{{data.age}}</td>
                 <td>
                     <button type="button" class="btn btn-danger" (click)="removeRow(data.id)">Delete</button>
-                    <button type="button" class="btn btn-secondary ml-3" (click)="editOldData(data.id)">Edit</button>
+                    <button type="button" class="btn btn-secondary ml-3"
+                        (click)="myEvent.emit({id:data.id,username:data.username,breath:data.breath,age:data.age})">Edit</button>
                 </td>
             </tr>
         </tbody>

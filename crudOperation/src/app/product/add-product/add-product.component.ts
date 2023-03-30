@@ -27,6 +27,7 @@ export class AddProductComponent implements OnInit {
         type: new FormControl("")
       }
     )
+    // get id from url
     this.id = this.route.snapshot.paramMap.get('id')
     // console.log(this.id);
 
@@ -34,6 +35,8 @@ export class AddProductComponent implements OnInit {
       this.productService.getDataById(this.id).subscribe(res => {
         this.res = res;
         // console.log(this.res);
+
+        // get data in form
         this.reactiveForm.setValue({
           productName: this.res.productName,
           productDescription: this.res.productDescription,
@@ -45,19 +48,19 @@ export class AddProductComponent implements OnInit {
 
   }
 
-  // Data post on server
   sendData() {
+    // add new data in server
     if (!this.updateData) {
       this.productService.postData(this.reactiveForm.value).subscribe((res: any) => {
         this.sendProduct = res;
       })
     }
+    // update data in server
     else {
       this.productService.editData(this.id, this.reactiveForm.value).subscribe(res => res);
     }
 
     this.router.navigate(['/list']) // Go to the list page on submit (on click)
-
   }
 
 }

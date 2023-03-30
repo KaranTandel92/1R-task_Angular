@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PassengerServiceService } from 'src/app/service/passenger-service.service';
 
 @Component({
@@ -11,8 +11,13 @@ export class ListComponent implements OnInit {
   newDataRow: any;
   data: any;
 
+  @Output() myEvent = new EventEmitter;
+
   constructor(private passengerService: PassengerServiceService) { }
 
+
+
+  // function of get data
   receiveData() {
     this.passengerService.getData().subscribe((res: any) => {
       this.userDetails = res;
@@ -20,21 +25,21 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.receiveData();
+    this.receiveData();   // data get from the server
   }
 
+  //  delete data
   removeRow(id: number) {
     this.passengerService.deleteData(id).subscribe();
     this.receiveData();
     console.log(id);
   }
 
-  editOldData(id: any) {
-    this.passengerService.getNewData(id).subscribe((res: any) => {
-
-      console.log(res);
-    })
-  }
+  // editOldData(id: any) {
+  // this.passengerService.getNewData(id).subscribe((res: any) => {
+  //   console.log(res);
+  // })
+  // }
 
 }
 
