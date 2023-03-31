@@ -1,7 +1,9 @@
 <div class="text-right mt-5 mr-5 mb-3">
     <button type="button" class="btn btn-primary mb-3" routerLink="/addEmployee/ ">+ Add Employee</button>
+    <input type="text" class="fa fa-search">
 </div>
-<div>
+
+<div class="m-5">
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -19,10 +21,10 @@
                 <td>{{employeeDetails.gender}}</td>
                 <td>{{employeeDetails.department}}</td>
                 <td>
-                    <span class="fa fa-edit" title="Edit your details"></span>
-                    <button (click)="removeDataRow(employeeDetails.id)">
-                        <span class="fa fa-trash-o ml-4" title="Delete your details"></span>
-                    </button>
+                    <span class="fa fa-edit" title="Edit your details"
+                        (click)="editEmployeeDetails(employeeDetails.id)"></span>
+                    <span class="fa fa-trash-o ml-4" title="Delete your details"
+                        (click)="removeDataRow(employeeDetails.id)"></span>
                 </td>
             </tr>
         </tbody>

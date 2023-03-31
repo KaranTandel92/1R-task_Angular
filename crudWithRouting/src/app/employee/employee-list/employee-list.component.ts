@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/service/employee.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-employee-list',
@@ -7,13 +9,13 @@ import { EmployeeService } from 'src/app/service/employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  storeEmployeeData: any;
+  public storeEmployeeData!: Employee[];
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private route: Router) { }
 
   // create function for get data
   createFunction() {
-    this.employeeService.getData().subscribe((res: any) => {
+    this.employeeService.getData().subscribe((res) => {
       this.storeEmployeeData = res
     });
   }
@@ -26,7 +28,12 @@ export class EmployeeListComponent implements OnInit {
   removeDataRow(id: number) {
     this.employeeService.deleteData(id).subscribe();
     this.createFunction();
-    console.log(id);
+    // console.log(id);
+  }
+
+  editEmployeeDetails(id: number) {
+    this.route.navigate(['/addEmployee', id]);
+    // console.log(id);
   }
 
 }

@@ -5,12 +5,14 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeePipe } from './employee.pipe';
 
 
 @NgModule({
   declarations: [
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    EmployeePipe
   ],
   imports: [
     CommonModule,
