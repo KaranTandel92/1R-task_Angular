@@ -1,6 +1,6 @@
 <div class="text-right mt-5 mr-5 mb-3">
     <button type="button" class="btn btn-primary mb-3" routerLink="/addEmployee/ ">+ Add Employee</button>
-    <input type="text" class="fa fa-search">
+    <input type="text" class="fa fa-search" [(ngModel)]="searchByName">
 </div>
 
 <div class="m-5">
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let employeeDetails of storeEmployeeData">
+            <tr *ngFor="let employeeDetails of storeEmployeeData | filter: searchByName">
                 <th scope="row">{{employeeDetails.id}}</th>
                 <td>{{employeeDetails.employeeName}}</td>
                 <td>{{employeeDetails.gender}}</td>

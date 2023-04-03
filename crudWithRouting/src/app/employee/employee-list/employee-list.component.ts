@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/service/employee.service';
-import { Employee } from '../employee';
 
 @Component({
   selector: 'app-employee-list',
@@ -9,7 +8,8 @@ import { Employee } from '../employee';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  public storeEmployeeData!: Employee[];
+  public storeEmployeeData: any;
+  public searchByName: any;
 
   constructor(private employeeService: EmployeeService, private route: Router) { }
 

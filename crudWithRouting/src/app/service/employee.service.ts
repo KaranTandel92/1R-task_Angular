@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Employee } from '../employee/employee';
 
 @Injectable({
@@ -14,13 +13,13 @@ export class EmployeeService {
 
 
   // get data
-  getData(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.url);
+  getData() {
+    return this.http.get(this.url);
   }
 
   // post data
-  postData(body: Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.url, body);
+  postData(body: Employee) {
+    return this.http.post(this.url, body);
   }
 
   // delete data
@@ -29,8 +28,8 @@ export class EmployeeService {
   }
 
   // get data from the id
-  getDataById(id: number): Observable<Employee> {
-    return this.http.get<Employee>(`${this.url}/${id}`);
+  getDataById(id: number) {
+    return this.http.get(`${this.url}/${id}`);
   }
 
   editData(id: number | null, body: Employee) {

@@ -4,20 +4,21 @@ import { CommonModule } from '@angular/common';
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { EmployeePipe } from './employee.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from '../service/filter.pipe';
 
 
 @NgModule({
   declarations: [
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    EmployeePipe
+    FilterPipe
   ],
   imports: [
     CommonModule,
     EmployeeRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class EmployeeModule { }

@@ -1,0 +1,9 @@
+.headbar {
+    padding: 10px 25px;
+    background-color: rgb(234, 253, 253);
+}
+
+.table-body {
+    display: flex;
+    justify-content: space-around;
+}
