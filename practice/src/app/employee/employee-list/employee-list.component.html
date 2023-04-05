@@ -1,0 +1,18 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">FIRST NAME</th>
+            <th scope="col">DEPARTMENT</th>
+            <th scope="col">AGE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employeeData of allEmployeeData">
+            <th scope="row">{{employeeData.id}}</th>
+            <td>{{employeeData.name}}</td>
+            <td>{{employeeData.department}}</td>
+            <td>{{employeeData.age}}</td>
+        </tr>
+    </tbody>
+</table>

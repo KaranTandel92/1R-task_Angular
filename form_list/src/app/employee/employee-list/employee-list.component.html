@@ -1,0 +1,31 @@
+<div class="table-body">
+    <div>
+        <button><label for="toggle">+ Add Employee</label></button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>DEPARTMENT</th>
+                <th>DESCRIPTION</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employeeDetails of allEmployeeData">
+                <td>{{employeeDetails.id}}</td>
+                <td>{{employeeDetails.name}}</td>
+                <td>{{employeeDetails.age}}</td>
+                <td>{{employeeDetails.department}}</td>
+                <td>{{employeeDetails.description}}</td>
+                <td>
+                    <button (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+                    <button (click)="getDataEvent.emit({id:employeeDetails.id, name:employeeDetails.name,age:employeeDetails.age,department:employeeDetails.department,
+                        description:employeeDetails.description})"><label for="toggle">Edit</label></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

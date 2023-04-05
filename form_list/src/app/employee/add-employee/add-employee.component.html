@@ -1,0 +1,27 @@
+<div>
+    <form [formGroup]="reactiveForm" (submit)="dataSubmit ? submitEmployeeData() : updateData()">
+        <div>
+            <div>
+                <label for="">NAME</label>
+                <input type="text" formControlName="name" class="textBox">
+            </div>
+            <div>
+                <label for="">AGE</label>
+                <input type="text" formControlName="age" class="textBox">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="">DEPARTMENT</label>
+                <input type="text" formControlName="department" class="textBox">
+            </div>
+            <div>
+                <label for="">DESCRIPTION</label>
+                <input type="text" formControlName="description" class="textBox">
+            </div>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

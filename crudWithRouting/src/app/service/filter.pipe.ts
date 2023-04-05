@@ -7,7 +7,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any, searchName: any): any {
 
-    if (value.length === 0) {
+    if (value) {
       return value
     }
 

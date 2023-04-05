@@ -13,7 +13,7 @@ export class EmployeeDetailsComponent implements OnInit {
   reactiveForm!: FormGroup;
   public sendEmployeeData!: Employee;
   public id!: number | null;
-  public res: any;
+  public res!: Employee;
   public editdata!: Employee;
   public updateData: boolean = false;
 
@@ -32,7 +32,7 @@ export class EmployeeDetailsComponent implements OnInit {
 
     if (this.id != null) {
       this.employeeService.getDataById(this.id).subscribe((res: any) => {
-        // debugger
+        debugger
         this.editdata = res;
 
         this.reactiveForm.setValue({        // to set the details(value) in the form on edit click

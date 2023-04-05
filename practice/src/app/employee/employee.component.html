@@ -1,0 +1,7 @@
+<div>
+    <div>
+        <app-employee-form *ngIf="isToggle" (cancelEvent)="formHide($event)"></app-employee-form>
+        <button class="btn btn-primary m-3" type="submit" (click)="formOn()">+ Add Employee</button>
+
+        <app-employee-list [allEmployeeData]="allEmployeeData" (isToggle)="openForm($event)"></app-employee-list>
+    </div>

@@ -1,0 +1,13 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset #ff00001f;
+}
+
+.textBox {
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(104, 113, 130, 0.16);
+    padding: 8px;
+    margin-right: 20px;
+    outline: 0;
+}

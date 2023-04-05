@@ -15,8 +15,6 @@ export class ListComponent implements OnInit {
 
   constructor(private passengerService: PassengerServiceService) { }
 
-
-
   // function of get data
   receiveData() {
     this.passengerService.getData().subscribe((res: any) => {

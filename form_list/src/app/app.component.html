@@ -1,0 +1,10 @@
+<input type="checkbox" id="toggle" checked>
+<app-add-employee [id]="id" [name]="name" [age]="age" [department]="department" [description]="description"
+    class="main-form"></app-add-employee>
+
+<div>
+    <input type="checkbox" id="main-toggle">
+    <app-employee-list (getDataEvent)="getNewEmployeeData($event)"></app-employee-list>
+</div>
+
+<router-outlet></router-outlet>

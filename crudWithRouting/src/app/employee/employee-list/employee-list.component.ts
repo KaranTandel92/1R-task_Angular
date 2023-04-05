@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/service/employee.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-employee-list',
@@ -8,16 +9,16 @@ import { EmployeeService } from 'src/app/service/employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  public storeEmployeeData: any;
-  public searchByName: any;
+  public storeEmployeeData!: Employee;
+  public searchByName!: Employee;
 
   constructor(private employeeService: EmployeeService, private route: Router) { }
 
   // create function for get data
   createFunction() {
-    this.employeeService.getData().subscribe((res) => {
-      this.storeEmployeeData = res
-    });
+    this.employeeService.getData().subscribe((res) => res
+      // this.storeEmployeeData = res
+    );
   }
 
   ngOnInit(): void {

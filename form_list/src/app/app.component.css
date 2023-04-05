@@ -1,0 +1,14 @@
+.main-form {
+    position: absolute;
+    background-color: grey;
+    right: 0;
+    width: 350px;
+    height: 60%;
+    z-index: 2;
+    margin-top: 75px;
+    transition: .5s ease-in-out;
+}
+
+#toggle:checked+.main-form {
+    transform: translateX(350px);
+}

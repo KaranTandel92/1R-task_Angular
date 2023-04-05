@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employeeList": [
+    {
+      "name": "Karan",
+      "age": "30",
+      "department": "Frontend",
+      "description": "fsdvsddvs",
+      "id": 1
+    },
+    {
+      "name": "Viren",
+      "age": "22",
+      "department": "Frontend",
+      "description": "ThisisRivet",
+      "id": 2
+    },
+    {
+      "name": "Viren",
+      "age": "22",
+      "department": "NET",
+      "description": "csdsdkvfsv",
+      "id": 3
+    },
+    {
+      "name": "Raj",
+      "age": "23",
+      "department": "Paython",
+      "description": "sfsdsvsfv",
+      "id": 5
+    },
+    {
+      "name": "Maahi",
+      "age": "21",
+      "department": "Frontend",
+      "description": "ssfsfsfvsf",
+      "id": 6
+    },
+    {
+      "name": "Diya",
+      "age": "21",
+      "department": "Mobiles",
+      "description": "This is 1Rivet",
+      "id": 7
+    }
+  ]
+}
